@@ -1,9 +1,19 @@
+import ContactSection from "@/components/contact";
+import Footer from "@/components/footer";
 import Header from "@/components/header";
+import Services from "@/components/services";
+import TeamSection from "@/components/team";
 
 export default function Home() {
   return (
-    <div className="bg-primary h-screen">
-      <Header />
+    <div className="flex flex-1 w-full bg-primary ">
+      <div className="w-full">
+        <Header />
+        <Services />
+        <TeamSection />
+        <ContactSection />
+        <Footer />
+      </div>
     </div>
   );
 }
