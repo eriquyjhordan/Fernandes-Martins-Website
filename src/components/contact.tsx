@@ -42,7 +42,7 @@ const ContactInfo: React.FC<ContactInfoProps> = ({
 );
 
 const ContactSection: React.FC = () => (
-    <section className="self-stretch mt-14 px-4 max-md:mt-10 max-md:max-w-full w-full mx-auto max-w-[1650px]">
+    <section className="self-stretch mt-14 px-4 max-md:mt-10 max-md:max-w-full w-full mx-auto max-w-[1426px]">
         <div className="flex gap-5 max-md:flex-col max-md:gap-0">
             <aside className="flex flex-col w-[36%] max-md:ml-0 max-md:w-full">
                 <ContactInfo

@@ -7,7 +7,7 @@ const ImageItem: React.FC<{ src: string; alt: string; className?: string, imageW
 
 const TeamSection: React.FC = () => (
   <section className="flex justify-center items-center px-16 py-20 mt-24 w-full bg-neutral-800 max-md:px-5 max-md:mt-10">
-    <div className="flex gap-5 justify-between mt-16 w-full max-w-[1216px] max-md:flex-wrap max-md:mt-10">
+    <div className="flex gap-5 justify-between mt-16 w-full max-w-[1426px] max-md:flex-wrap max-md:mt-10">
       <div className="flex flex-col mt-12 max-md:mt-10">
         <div className="flex gap-5 justify-between items-start max-md:flex-wrap">
           <ImageItem

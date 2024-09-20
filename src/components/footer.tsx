@@ -54,7 +54,7 @@ const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="self-stretch py-0.5 mt-36 px-4 pb-4 max-md:mt-10 max-md:max-w-full  w-full mx-auto max-w-[1650px]">
+    <footer className="self-stretch py-0.5 mt-36 px-4 pb-4 max-md:mt-10 max-md:max-w-full  w-full mx-auto max-w-[1426px]">
       <div className="flex gap-5 max-md:flex-col max-md:gap-0">
         <div className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
           <div className="flex flex-col grow text-base max-md:mt-10 max-md:max-w-full">

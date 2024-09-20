@@ -37,7 +37,7 @@ const InfoCard: React.FC<InfoCardProps> = ({ title, description, tags, imageSrc,
 );
 
 const Services: React.FC = () => (
-  <main className="flex flex-col gap-6 px-5 mt-14 w-full mx-auto max-w-[1650px] max-md:mt-10 max-md:max-w-full">
+  <main className="flex flex-col gap-6 px-5 mt-14 w-full mx-auto max-w-[1426px] max-md:mt-10 max-md:max-w-full">
     <ServicesHeader />
     <section className="flex gap-5 max-md:flex-col max-md:gap-0">
       <div className="flex flex-col w-[33%] max-md:w-full gap-8">
