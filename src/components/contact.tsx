@@ -78,9 +78,6 @@ const ContactSection: React.FC = () => (
           width={500}
           height={300}
           className="w-full aspect-[1.64] max-md:mt-10 max-md:max-w-full"
-          sizes="(max-width: 640px) 100vw,
-           (max-width: 1024px) 80vw,
-           64vw"
         />
       </figure>
     </div>

@@ -7,6 +7,11 @@ import { useState } from "react";
 
 export default function Header() {
   const [mobileMenu, setMobileMenu] = useState<boolean>(false);
+  const [message, setMessage] = useState<string>("");
+
+  function sendMessageToWhatsapp() {
+    window.open(`https://wa.me/5533999602838?text=${message}`, '_blank');
+  }
 
   return (
     <header className="bg-header w-full relative py-9 md:pb-16">
@@ -80,9 +85,18 @@ export default function Header() {
             <input
               type="text"
               placeholder="Como podemos te ajudar?"
-              className="w-full text-xs py-5 pr-[134px] sm:pr-[260px] z-50 px-10 text-black rounded-[64px] outline-none "
+              className="w-full text-xs py-5 pr-[134px] sm:pr-[260px] z-50 px-10 text-black rounded-[64px] outline-none"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
             />
-            <button className="bg-secondary hover:bg-secondaryHover z-50 text-xs text-primary h-full pl-6 pr-5 sm:px-16 py-2 rounded-tr-[64px] rounded-br-[64px] rounded-bl-[150px] absolute top-0 right-0">Entre em contato</button>
+            <button
+              className={`bg-secondary z-50 text-xs text-primary h-full pl-6 pr-5 sm:px-16 py-2 rounded-tr-[64px] rounded-br-[64px] rounded-bl-[150px] absolute top-0 right-0 ${message.length === 0 ? 'opacity-70 cursor-not-allowed' : 'hover:bg-secondaryHover'
+                }`}
+              disabled={message.length === 0}
+              onClick={sendMessageToWhatsapp}
+            >
+              Entre em contato
+            </button>
           </div>
         </div>
       </div>
