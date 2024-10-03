@@ -5,7 +5,7 @@ import Logo from "@/images/logo.svg";
 import Link from "next/link";
 import { useState } from "react";
 
-export default function Header() {
+export default function Hero() {
   const [mobileMenu, setMobileMenu] = useState<boolean>(false);
   const [message, setMessage] = useState<string>("");
 
