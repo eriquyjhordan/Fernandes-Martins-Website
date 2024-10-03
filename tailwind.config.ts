@@ -17,6 +17,35 @@ const config: Config = {
       width: {
         'header-width': 'calc(100% - 488px)',
       },
+      keyframes: {
+        'fade-in': {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        'slide-up': {
+          '0%': { transform: 'translateY(100%)' },
+          '100%': { transform: 'translateY(0)' },
+        },
+        'slide-left': {
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(0)' },
+        },
+        'slide-right': {
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(0)' },
+        },
+        'slide-down': {
+          '0%': { transform: 'translateY(-100%)' },
+          '100%': { transform: 'translateY(0)' },
+        },
+      },
+      animation: {
+        'fade-in': 'fade-in 1s ease-out',
+        'slide-up': 'slide-up 0.7s ease-out',
+        'slide-left': 'slide-left 0.7s ease-out',
+        'slide-right': 'slide-right 0.7s ease-out',
+        'slide-down': 'slide-down 0.7s ease-out',
+      },
     },
   },
   plugins: [],

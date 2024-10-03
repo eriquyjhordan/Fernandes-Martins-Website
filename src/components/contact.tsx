@@ -1,5 +1,9 @@
 import * as React from "react";
 import Image from "next/image";
+import Mail from "@/images/Icon/envelope.svg"
+import Phone from "@/images/Icon/phone.svg"
+import Map from "@/images/Icon/map.svg"
+import Location from "@/images/location.png"
 
 type ContactInfoProps = {
   imgSrc: string;
@@ -25,9 +29,8 @@ const ContactInfo: React.FC<ContactInfoProps> = ({
       loading="lazy"
       src={imgSrc}
       alt={imgAlt}
-      width={32}
-      height={32}
-      className="w-8 aspect-square"
+      width={24}
+      height={24}
     />
     <div className="mt-4 text-xl font-bold leading-7">{title}</div>
     <div className="mt-2">{description}</div>
@@ -42,11 +45,11 @@ const ContactInfo: React.FC<ContactInfoProps> = ({
 );
 
 const ContactSection: React.FC = () => (
-  <section className="self-stretch mt-14 px-4 max-md:mt-10 max-md:max-w-full w-full mx-auto max-w-[1426px]">
+  <section className="self-stretch mt-14 px-4 max-md:mt-10 w-full mx-auto max-w-[1426px]">
     <div className="flex gap-5 max-md:flex-col max-md:gap-0">
-      <aside className="flex flex-col w-[36%] max-md:ml-0 max-md:w-full">
+      <aside className="flex flex-col w-[36%] gap-5 max-md:ml-0 max-md:w-full">
         <ContactInfo
-          imgSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/a81715765533b9b547096ca29c8c650abb003a29767ae45d87f7ae74e328d94c?apiKey=59df490fe78040cdbef83a436347ab86&"
+          imgSrc={Mail}
           imgAlt="Email icon"
           title="Email"
           description="Envie-nos uma mensagem"
@@ -55,7 +58,7 @@ const ContactSection: React.FC = () => (
           isLink={true}
         />
         <ContactInfo
-          imgSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/9043a3a002bed8d5846c4e988f530a36f54e5c5fe095d3c635d61d2eb1d80649?apiKey=59df490fe78040cdbef83a436347ab86&"
+          imgSrc={Phone}
           imgAlt="Phone icon"
           title="Telefone"
           description="Ligue para nós"
@@ -64,20 +67,20 @@ const ContactSection: React.FC = () => (
           isLink={true}
         />
         <ContactInfo
-          imgSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/a4d6dce6f8805cc517c487d723f230d5bba5eaf3b3d227feabb0ea4e1ccb7d30?apiKey=59df490fe78040cdbef83a436347ab86&"
+          imgSrc={Map}
           imgAlt="Office icon"
           title="Escritório"
           description="Rua Pedro Nolasco, 851, Centro, Aimorés-MG, CEP 35200-000."
         />
       </aside>
-      <figure className="flex flex-col ml-5 w-[64%] max-md:ml-0 max-md:w-full">
+      <figure className="flex flex-col ml-5 max-md:ml-0 max-md:w-full">
         <Image
           loading="lazy"
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/94eb48060dcefe755175529c920978152d8113a2342454b9620b73a740c1f5ef?apiKey=59df490fe78040cdbef83a436347ab86&"
+          src={Location}
           alt="Office location"
-          width={500}
-          height={300}
-          className="w-full aspect-[1.64] max-md:mt-10 max-md:max-w-full"
+          width={734}
+          height={444}
+          style={{ width: '734px', height: '444px' }}
         />
       </figure>
     </div>

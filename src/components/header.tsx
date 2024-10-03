@@ -1,7 +1,7 @@
 "use client"
 import Image from "next/image";
-import JusticeBackground from "../../public/images/justice-background.webp";
-import Logo from "../../public/images/logo.svg";
+import JusticeBackground from "@/images/justice-background.webp";
+import Logo from "@/images/logo.svg";
 import Link from "next/link";
 import { useState } from "react";
 

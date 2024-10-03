@@ -1,6 +1,8 @@
 "use client";
 import * as React from "react";
 import Image from "next/image";
+import Instagram from "@/images/Icon/Instagram.svg";
+import Logo from "@/images/logo-2.png";
 
 interface EmailFormProps {
   onSubmit: (email: string) => void;
@@ -59,7 +61,7 @@ const Footer: React.FC = () => {
         <div className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
           <div className="flex flex-col grow text-base max-md:mt-10 max-md:max-w-full">
             <Image 
-              src="/images/ext_3.png" 
+              src={Logo}
               alt="Newsletter Icon" 
               width={89} 
               height={29} 
@@ -83,16 +85,16 @@ const Footer: React.FC = () => {
               <div className="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
                 <div className="flex flex-col whitespace-nowrap leading-[150%] max-md:mt-10">
                   <div className="text-base font-semibold text-black">Siga-nos</div>
-                  <div className="flex gap-3 py-2 mt-4 text-sm text-black">
+                  <a href="https://instagram.com" target="_blank" className="flex gap-3 py-2 mt-4 text-sm text-black">
                     <Image 
-                      src="/images/ext_4.png" 
+                      src={Instagram}
                       alt="Instagram Icon" 
                       width={24} 
                       height={24} 
                       className="shrink-0 aspect-square" 
                     />
-                    <div>Instagram</div>
-                  </div>
+                   <div>Instagram</div> 
+                  </a>
                 </div>
               </div>
             </div>
