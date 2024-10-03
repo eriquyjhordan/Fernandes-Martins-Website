@@ -1,6 +1,6 @@
 import ContactSection from "@/components/contact";
 import Footer from "@/components/footer";
-import Header from "@/components/header";
+import Hero from "@/components/hero";
 import Services from "@/components/services";
 import TeamSection from "@/components/team";
 
@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div className="flex flex-1 w-full bg-primary ">
       <div className="w-full">
-        <Header />
+        <Hero />
         <Services />
         <TeamSection />
         <ContactSection />

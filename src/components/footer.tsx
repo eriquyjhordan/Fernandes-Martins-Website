@@ -45,7 +45,7 @@ const ServiceList: React.FC<ServiceListProps> = ({ services }) => (
   <div className="flex flex-col grow pb-2 text-sm leading-5 text-black max-md:mt-10">
     <div className="text-base font-semibold text-black">Nossos Serviços</div>
     {services.map((service, index) => (
-      <div key={index} className="mt-4">{service}</div>
+      <a href="#" key={index} className="mt-4 hover:underline transition-all duration-500">{service}</a>
     ))}
   </div>
 );
@@ -85,13 +85,13 @@ const Footer: React.FC = () => {
               <div className="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
                 <div className="flex flex-col whitespace-nowrap leading-[150%] max-md:mt-10">
                   <div className="text-base font-semibold text-black">Siga-nos</div>
-                  <a href="https://instagram.com" target="_blank" className="flex gap-3 py-2 mt-4 text-sm text-black">
+                  <a href="https://instagram.com" target="_blank" className="flex gap-3 items-center py-2 mt-4 text-sm text-black group hover:font-bold transition-all duration-100 ease-in-out">
                     <Image 
                       src={Instagram}
                       alt="Instagram Icon" 
                       width={24} 
                       height={24} 
-                      className="shrink-0 aspect-square" 
+                      className="shrink-0 aspect-square group-hover:scale-105" 
                     />
                    <div>Instagram</div> 
                   </a>
