@@ -82,16 +82,26 @@ const ContactSection: React.FC = () => (
           isLink={true}
         />
       </aside>
-      <figure className="flex flex-col ml-5 max-md:ml-0 max-md:w-full">
-        <Image
-          loading="lazy"
-          src={Location}
-          alt="Office location"
-          width={734}
-          height={444}
-          style={{ width: '734px', height: '444px' }}
-        />
-      </figure>
+
+      <a href="https://maps.app.goo.gl/KLYxnXyfQ17M1ZUe6" target="_blank">
+        <figure className="relative flex flex-col ml-5 max-md:ml-0 max-md:w-full group overflow-hidden cursor-pointer">
+          <Image
+            loading="lazy"
+            src={Location}
+            alt="Office location"
+            width={734}
+            height={444}
+            style={{ width: '734px', height: '444px' }}
+            className="transition-transform duration-500 ease-in-out group-hover:scale-110"
+          />
+          <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out flex justify-center items-center">
+            <span className="text-white text-lg font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
+              Ver localização
+            </span>
+          </div>
+        </figure>
+
+      </a>
     </div>
   </section>
 );
