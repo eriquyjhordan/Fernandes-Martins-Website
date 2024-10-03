@@ -4,6 +4,7 @@ import Mail from "@/images/Icon/envelope.svg"
 import Phone from "@/images/Icon/phone.svg"
 import Map from "@/images/Icon/map.svg"
 import Location from "@/images/location.png"
+import { MdKeyboardArrowRight } from "react-icons/md"
 
 type ContactInfoProps = {
   imgSrc: string;
@@ -35,8 +36,13 @@ const ContactInfo: React.FC<ContactInfoProps> = ({
     <div className="mt-4 text-xl font-bold leading-7">{title}</div>
     <div className="mt-2">{description}</div>
     {isLink ? (
-      <a href={linkHref} className="mt-2 text-black underline">
+      <a href={linkHref} className="mt-2 text-black underline group">
         {linkText}
+        {
+          linkHref?.includes('maps') && (
+            <MdKeyboardArrowRight className="inline text-black group-hover:translate-x-1 transition-all" />
+          )
+        }
       </a>
     ) : (
       <div className="mt-2 leading-6">{linkText}</div>
@@ -71,6 +77,9 @@ const ContactSection: React.FC = () => (
           imgAlt="Office icon"
           title="Escritório"
           description="Rua Pedro Nolasco, 851, Centro, Aimorés-MG, CEP 35200-000."
+          linkHref="https://maps.app.goo.gl/KLYxnXyfQ17M1ZUe6"
+          linkText="Ver Localização"
+          isLink={true}
         />
       </aside>
       <figure className="flex flex-col ml-5 max-md:ml-0 max-md:w-full">
