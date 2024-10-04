@@ -26,9 +26,9 @@ export default function Hero() {
             height={84}
           />
           <div className="sm:flex gap-5 header-links hidden">
-            <Link href="/" className="text-primary hover:text-secondary">Sobre nós</Link>
-            <Link href="/" className="text-primary hover:text-secondary">Equipe</Link>
-            <Link href="/" className="text-primary hover:text-secondary">Áreas de Atuação</Link>
+            <Link href="/" className="text-white hover:text-secondary">Sobre nós</Link>
+            <Link href="/" className="text-white hover:text-secondary">Equipe</Link>
+            <Link href="/" className="text-white hover:text-secondary">Áreas de Atuação</Link>
           </div>
           <div className="sm:hidden" onClick={() => setMobileMenu(true)}>
             <svg
@@ -74,13 +74,13 @@ export default function Hero() {
         </div>
         <div className="mx-4 sm:mx-6 mt-16 sm:ml-[112px] sm:max-w-[1200px]">
           <div className="flex items-center gap-2">
-            <div className="h-[1px] w-6 bg-primary" />
-            <p className="text-primary text-xs mb-0">Assessoria e consultoria Jurídica</p>
+            <div className="h-[1px] w-6 bg-white" />
+            <p className="text-white text-xs mb-0">Assessoria e consultoria Jurídica</p>
           </div>
-          <h1 className="mt-1 text-3xl sm:text-[40px] font-bold leading-10 text-primary sm:max-w-[476px]">
+          <h1 className="mt-1 text-3xl sm:text-[40px] font-bold leading-10 text-white sm:max-w-[476px]">
             Proteja seus direitos com excelência e estratégia
           </h1>
-          <p className="text-primary text-base mt-6 font-extralight sm:max-w-[370px]">Estamos prontos para te oferecer soluções jurídicas eficientes. Faça consulta inicial sem compromisso.</p>
+          <p className="text-white text-base mt-6 font-extralight sm:max-w-[370px]">Estamos prontos para te oferecer soluções jurídicas eficientes. Faça consulta inicial sem compromisso.</p>
           <div className="mt-6 flex relative lg:max-w-[800px] xl:max-w-[980px] mr-6">
             <input
               type="text"
@@ -90,7 +90,7 @@ export default function Hero() {
               onChange={(e) => setMessage(e.target.value)}
             />
             <button
-              className={`bg-secondary z-50 text-xs text-primary h-full pl-6 pr-5 sm:px-16 py-2 rounded-tr-[64px] rounded-br-[64px] rounded-bl-[150px] absolute top-0 right-0 ${message.length === 0 ? 'opacity-70 cursor-not-allowed' : 'hover:bg-secondaryHover'
+              className={`bg-[#AB8768] z-50 text-xs text-white h-full pl-6 pr-5 sm:px-16 py-2 rounded-tr-[64px] rounded-br-[64px] rounded-bl-[150px] absolute top-0 right-0 ${message.length === 0 ? 'opacity-70 cursor-not-allowed' : 'hover:bg-secondaryHover'
                 }`}
               disabled={message.length === 0}
               onClick={sendMessageToWhatsapp}

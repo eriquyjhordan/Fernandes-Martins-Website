@@ -6,7 +6,7 @@ import TeamSection from "@/components/team";
 
 export default function Home() {
   return (
-    <div className="flex flex-1 w-full bg-primary ">
+    <div className="flex flex-1 w-full">
       <div className="w-full">
         <Hero />
         <Services />

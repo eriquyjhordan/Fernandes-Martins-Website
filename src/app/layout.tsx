@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "@/components/theme-provider"
 
-const roboto = Roboto({ subsets: ["latin"], weight: ["100","300","400", "700"]});
+const roboto = Roboto({ subsets: ["latin"], weight: ["100", "300", "400", "700"] });
 
 export const metadata: Metadata = {
   title: "Site Mariana",
@@ -16,7 +17,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body className={roboto.className}>{children}</body>
+      <body className={roboto.className}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+        >
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
