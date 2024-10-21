@@ -50,9 +50,10 @@ const config: Config = {
       },
       backgroundImage: {
         header:
-          "linear-gradient(-76.33deg, rgba(132, 88, 109, 1) 0%, rgba(57, 38, 47, 1) 77%)",
+        "linear-gradient(-76.33deg, rgba(132, 88, 109, 1) 0%, rgba(57, 38, 47, 1) 77%)",
 				"secondary-gradient":
 					"linear-gradient(270deg, rgba(172,136,105,1) 0%, rgba(129,99,83,1) 77%)",
+        "primary-dark": "rgba(57, 38, 47, 1)"
       },
       width: {
         "header-width": "calc(100% - 488px)",
