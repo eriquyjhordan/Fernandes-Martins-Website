@@ -1,20 +1,20 @@
-import * as React from "react";
-import Image from "next/image";
-import Mail from "@/images/Icon/envelope.svg"
-import Phone from "@/images/Icon/phone.svg"
-import Map from "@/images/Icon/map.svg"
-import Location from "@/images/location.png"
-import { MdKeyboardArrowRight } from "react-icons/md"
+import * as React from 'react'
+import Image from 'next/image'
+import Mail from '@/images/Icon/envelope.svg'
+import Phone from '@/images/Icon/phone.svg'
+import Map from '@/images/Icon/map.svg'
+import Location from '@/images/location.png'
+import { MdKeyboardArrowRight } from 'react-icons/md'
 
 type ContactInfoProps = {
-  imgSrc: string;
-  imgAlt: string;
-  title: string;
-  description: string;
-  linkText?: string;
-  linkHref?: string;
-  isLink?: boolean;
-};
+  imgSrc: string
+  imgAlt: string
+  title: string
+  description: string
+  linkText?: string
+  linkHref?: string
+  isLink?: boolean
+}
 
 const ContactInfo: React.FC<ContactInfoProps> = ({
   imgSrc,
@@ -26,29 +26,21 @@ const ContactInfo: React.FC<ContactInfoProps> = ({
   isLink,
 }) => (
   <div className="flex flex-col py-0.5 text-base leading-6 text-black max-md:mt-10">
-    <Image
-      loading="lazy"
-      src={imgSrc}
-      alt={imgAlt}
-      width={24}
-      height={24}
-    />
+    <Image loading="lazy" src={imgSrc} alt={imgAlt} width={24} height={24} />
     <div className="mt-4 text-xl font-bold leading-7">{title}</div>
     <div className="mt-2">{description}</div>
     {isLink ? (
       <a href={linkHref} className="mt-2 text-black underline group">
         {linkText}
-        {
-          linkHref?.includes('maps') && (
-            <MdKeyboardArrowRight className="inline text-black group-hover:translate-x-1 transition-all" />
-          )
-        }
+        {linkHref?.includes('maps') && (
+          <MdKeyboardArrowRight className="inline text-black group-hover:translate-x-1 transition-all" />
+        )}
       </a>
     ) : (
       <div className="mt-2 leading-6">{linkText}</div>
     )}
   </div>
-);
+)
 
 const ContactSection: React.FC = () => (
   <section className="self-stretch mt-14 px-4 max-md:mt-10 w-full mx-auto max-w-[1426px]">
@@ -100,10 +92,9 @@ const ContactSection: React.FC = () => (
             </span>
           </div>
         </figure>
-
       </a>
     </div>
   </section>
-);
+)
 
-export default ContactSection;
+export default ContactSection

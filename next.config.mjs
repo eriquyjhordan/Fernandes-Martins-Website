@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['cdn.builder.io'],
+    domains: ['cdn.builder.io', 'cdn.sanity.io'],
     loader: 'default',
   },
 };

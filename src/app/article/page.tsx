@@ -1,9 +1,8 @@
-import BlogHeaderImage from "@/components/blogHeaderImage";
-import BlogPost from "@/components/blogPost";
-import ContactForm from "@/components/contactForm";
-import Footer from "@/components/footer";
-import Header from "@/components/header";
-
+import BlogHeaderImage from '@/components/blogHeaderImage'
+import BlogPost from '@/components/blogPost'
+import ContactForm from '@/components/contactForm'
+import Footer from '@/components/footer'
+import Header from '@/components/header'
 
 export default function Article() {
   return (
@@ -12,7 +11,9 @@ export default function Article() {
       <BlogHeaderImage />
       <div className="flex mt-10 p-4 max-w-[1216px] justify-between mx-auto">
         <BlogPost />
-        <ContactForm />
+        <section>
+          <ContactForm />
+        </section>
       </div>
       <Footer />
     </div>

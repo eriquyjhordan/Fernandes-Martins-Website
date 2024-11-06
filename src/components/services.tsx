@@ -1,27 +1,46 @@
-import React from 'react';
-import ServicesHeader from './services-header';
-import Image from 'next/image';
+import React from 'react'
+import ServicesHeader from './services-header'
+import Image from 'next/image'
 
 type InfoCardProps = {
-  title: string;
-  description: string;
-  tags: string[];
-  imageSrc: string;
-  alt: string;
-  learnMoreLink: string;
-  imageWidth?: number;
-  imageHeight?: number;
-};
+  title: string
+  description: string
+  tags: string[]
+  imageSrc: string
+  alt: string
+  learnMoreLink: string
+  imageWidth?: number
+  imageHeight?: number
+}
 
-const InfoCard: React.FC<InfoCardProps> = ({ title, description, tags, imageSrc, alt, learnMoreLink, imageHeight, imageWidth }) => (
+const InfoCard: React.FC<InfoCardProps> = ({
+  title,
+  description,
+  tags,
+  imageSrc,
+  alt,
+  learnMoreLink,
+  imageHeight,
+  imageWidth,
+}) => (
   <article className="flex flex-col text-black border border-black border-solid">
-    <Image loading="lazy" src={imageSrc} alt={alt} className="w-full" width={imageWidth ?? 383} height={imageHeight ?? 234} />
+    <Image
+      loading="lazy"
+      src={imageSrc}
+      alt={alt}
+      className="w-full"
+      width={imageWidth ?? 383}
+      height={imageHeight ?? 234}
+    />
     <div className="flex flex-col p-6 max-md:px-5">
       <h2 className="text-2xl font-bold leading-8">{title}</h2>
       <p className="mt-2 leading-6">{description}</p>
       <div className="flex gap-2 mt-4 text-xs font-semibold max-md:mr-0.5 flex-wrap">
         {tags.map((tag, index) => (
-          <div key={index} className="justify-center px-2 py-1 bg-zinc-100 whitespace-nowrap">
+          <div
+            key={index}
+            className="justify-center px-2 py-1 bg-zinc-100 whitespace-nowrap"
+          >
             {tag}
           </div>
         ))}
@@ -30,11 +49,16 @@ const InfoCard: React.FC<InfoCardProps> = ({ title, description, tags, imageSrc,
         <a href={learnMoreLink} className="text-base leading-6">
           Saiba mais
         </a>
-        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/ee5bdbc32bbc53684deecb2f9d63712884517174ee790d5d45a4eae8116d726d?apiKey=59df490fe78040cdbef83a436347ab86&" alt="" className="shrink-0 w-6 aspect-square" />
+        <img
+          loading="lazy"
+          src="https://cdn.builder.io/api/v1/image/assets/TEMP/ee5bdbc32bbc53684deecb2f9d63712884517174ee790d5d45a4eae8116d726d?apiKey=59df490fe78040cdbef83a436347ab86&"
+          alt=""
+          className="shrink-0 w-6 aspect-square"
+        />
       </div>
     </div>
   </article>
-);
+)
 
 const Services: React.FC = () => (
   <main className="flex flex-col gap-6 px-5 mt-14 w-full mx-auto max-w-[1426px] max-md:mt-10 max-md:max-w-full">
@@ -44,7 +68,13 @@ const Services: React.FC = () => (
         <InfoCard
           title="Direito Civil"
           description="Se precisa resolver questões sobre família, herança, contratos ou propriedade, o Direito Civil é fundamental. Nós cuidamos de tudo isso para você, garantindo seus direitos em cada passo."
-          tags={['Contratos e Obrigações', 'Divórcios', 'Casamento e união estável', 'Inventário e partilha de bens', 'Guarda e pensão alimentícia']}
+          tags={[
+            'Contratos e Obrigações',
+            'Divórcios',
+            'Casamento e união estável',
+            'Inventário e partilha de bens',
+            'Guarda e pensão alimentícia',
+          ]}
           imageSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/ecda7d96ac650a6c52f006db0ee4e0644cdba4334cc708999c1ff8aa1cbdd96e?apiKey=59df490fe78040cdbef83a436347ab86&"
           alt="Imagery representing Direito Civil"
           learnMoreLink="#"
@@ -52,7 +82,11 @@ const Services: React.FC = () => (
         <InfoCard
           title="Direito do Consumidor"
           description="Se enfrentar problemas com produtos ou serviços, estamos aqui para garantir que seus direitos como consumidor sejam protegidos. Não aceite menos do que você merece."
-          tags={['Defesa em casos de consumo', 'Ações contra práticas abusivas', 'Indenizações por danos']}
+          tags={[
+            'Defesa em casos de consumo',
+            'Ações contra práticas abusivas',
+            'Indenizações por danos',
+          ]}
           imageSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/ecda7d96ac650a6c52f006db0ee4e0644cdba4334cc708999c1ff8aa1cbdd96e?apiKey=59df490fe78040cdbef83a436347ab86&"
           alt="Imagery representing Direito do Consumidor"
           learnMoreLink="#"
@@ -62,7 +96,12 @@ const Services: React.FC = () => (
         <InfoCard
           title="Direito Penal"
           description="Caso enfrente problemas legais, como acusações criminais, estamos aqui para ajudar. Nosso objetivo é garantir que você receba um tratamento justo perante a lei."
-          tags={['Defesa Criminal', 'Assistência em audiências e delegacias', 'Crimes contra a pessoa', 'Crimes contra o patrimônio']}
+          tags={[
+            'Defesa Criminal',
+            'Assistência em audiências e delegacias',
+            'Crimes contra a pessoa',
+            'Crimes contra o patrimônio',
+          ]}
           imageSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/33a2617547910ce453551b23b3469d54bf095f0ef73e5caf820b661785a4813d?apiKey=59df490fe78040cdbef83a436347ab86&"
           alt="Imagery representing Direito Penal"
           learnMoreLink="#"
@@ -98,6 +137,6 @@ const Services: React.FC = () => (
       </div>
     </section>
   </main>
-);
+)
 
-export default Services;
+export default Services

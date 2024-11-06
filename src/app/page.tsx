@@ -1,8 +1,8 @@
-import ContactSection from "@/components/contact";
-import Footer from "@/components/footer";
-import Hero from "@/components/hero";
-import Services from "@/components/services";
-import TeamSection from "@/components/team";
+import ContactSection from '@/components/contact'
+import Footer from '@/components/footer'
+import Hero from '@/components/hero'
+import Services from '@/components/services'
+import TeamSection from '@/components/team'
 
 export default function Home() {
   return (
@@ -15,5 +15,5 @@ export default function Home() {
         <Footer />
       </div>
     </div>
-  );
+  )
 }
